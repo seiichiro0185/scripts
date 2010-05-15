@@ -194,6 +194,8 @@ def convert(input, output, res, abitrate, vbitrate, threads, mpopts):
 			"-oac", "faac",
 			"-faacopts", "br=" + str(abitrate) + ":mpeg=4:object=2",
 			"-ovc", "copy",
+			"-mc", "0",
+			"-vf", "softskip",
 			"-of", "rawaudio",
 			"-o", aac,
 			"-noskip",
