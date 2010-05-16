@@ -96,7 +96,7 @@ def main(argv):
 	else:
 		m4bin = progpath("MP4Box")
 	if m4bin == None:
-		print "Error: mencoder not found in PATH and no binary given, Aborting!"
+		print "Error: MP4Box not found in PATH and no binary given, Aborting!"
 		sys.exit(1)
 
 	# Check input and output files
@@ -269,7 +269,7 @@ def usage():
 	print "  --output <file>   [-o]: Name of the converted Video"
 	print "  --mpopts \"<opts>\" [-m]: Additional options for mplayer (eg -sid 1 or -aid 1) Must be enclosed in \"\""
 	print "  --abitrate <br>   [-a]: Audio Bitrate in KBit/s"
-	print "  --vbitrate <br>   [-v]: Video Bitrate in kBit/s, values < 0 activate h264 CRF-Encoding, given value is used as CRF Factor"
+	print "  --vbitrate <br>   [-v]: Video Bitrate in kBit/s, values < 52 activate h264 CRF-Encoding, given value is used as CRF Factor"
 	print "  --threads <num>   [-t]: Use <num> Threads to encode, giving 0 will autodetect number of CPUs"
 	print "  --force-overwrite [-f]: Overwrite output-file if existing"
 	print "  --help            [-h]: Print this Help"
