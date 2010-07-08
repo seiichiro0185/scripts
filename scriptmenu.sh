@@ -16,7 +16,7 @@ do
 	echo "${i}" >> /tmp/scriptmenu.$$
 done
 
-sort > /tmp/scriptmenu_s.$$ < /tmp/scriptmenu.$$
+LC_ALL=C sort > /tmp/scriptmenu_s.$$ < /tmp/scriptmenu.$$
 
 cut -d';' -f1 < /tmp/scriptmenu_s.$$ | uniq > /tmp/menucat.$$
 
